@@ -185,13 +185,54 @@ a svg {
 .navbar-brand a {
      color: white;
      text-decoration: none;
+     margin-left: 10px;
 
 }
 
 .navbar-link:hover {
      color: firebrick;
-
      transition: .2s ease;
+}
+
+form {
+     display: inline;
+     margin: 10px;
+
+}
+
+.date {
+     height: 30px;
+     border-radius: 10px;
+     padding: 0 0.3em;
+     border: 1px solid firebrick;
+}
+
+form input:active {
+     outline: none;
+     border: none;
+}
+
+form input:focus {
+     outline: 0;
+}
+
+.search {
+     height: 35px;
+     text-align: center;
+     margin-right: 20px;
+     color: white;
+     font-size: 1em;
+     background: #003344;
+     border: 1px solid firebrick;
+}
+
+form button:active {
+     outline: none;
+     border: none;
+}
+
+form button:focus {
+     outline: 0;
 }
 
 /* END NAVBAR STYLING */
@@ -342,7 +383,7 @@ button:focus {
 .grid-box {
      display: grid;
      grid-template-columns: 1fr 1fr 1fr;
-     grid-gap: .7em;
+     grid-gap: 1.7em;
      justify-content: space-around;
      margin-top: 100px;
      margin-left: 30px;
@@ -362,6 +403,8 @@ button:focus {
      transition: 0.3s ease;
      margin-left: 150px;
      margin-top: 20px;
+     align-items: center;
+     justify-content: center;
 
 }
 
@@ -371,7 +414,7 @@ button:focus {
      font-weight: 700;
      margin: 20px;
      font-size: 1.1em;
-     /* color: red; */
+     
 }
 
 
@@ -387,6 +430,7 @@ footer {
      align-content: center;
      grid-gap: 1em;
      background: #003344;
+     align-self: center;
 }
 
 .copy>svg {
