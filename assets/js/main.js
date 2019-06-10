@@ -77,13 +77,43 @@ text_truncate = function (str, length, ending) {
           return str;
      }
 };
-const deleteItem = (event) => {
-     console.log(event)
-}
 
-var trend = document.querySelector('.trend');
+var add = document.querySelector('.add_btn');
+
+add.addEventListener('click', (e) => {
+     e.preventDefault();
+     var url = document.querySelector('#url').value;
+var title = document.getElementById('title').value;
+var msg = document.querySelector('textarea').value;
+
+
+
+     posts.push({
+     id: posts.length + 1,
+     title: title,
+     date: Date.now(),
+     image: url,
+     content: msg,
+     pageurl: `../../page${posts.length+1}.html`
+});
+
+
+
+
+     console.log(posts);
+     
+
+})
+
+
+
+
+
+
+
 
 posts.forEach(post => {
+     var trend = document.querySelector('.trend');
      var divcol4 = document.createElement('div');
      var div_trendImage = document.createElement('div');
      var div_trendContent = document.createElement('div')
@@ -122,7 +152,10 @@ posts.forEach(post => {
      p.textContent = text_truncate(post.content, 100, '.');
      link.textContent = post.title;
 
-     btn.addEventListener('click', () => {
+     
+
+     btn.addEventListener('click', (e) => {
+          e.preventDefault();
           // console.log(divcol4)
           divcol4.style.display = "none";
 
@@ -130,3 +163,5 @@ posts.forEach(post => {
      })
 
 });
+
+

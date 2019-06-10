@@ -2,15 +2,18 @@
 /* 
 ------------------------------------
 #1    GENERAL
-----------------------------------------
+----------------------------------
 #2    ARCHIVE
 -------------------------------------
 #3 NAVBAR
 ------------------------------------
 #4 Welcome Section
 ---------------------------------
+#6 PAGES
+------------------------------
 #5 TOP TRENDS
 ----------------------------
+
 
 
 
@@ -308,6 +311,7 @@ form button:focus {
      margin-right: 5px;
      transition: all 0.3s ease 0s;
 }
+
 .delete:hover {
      cursor: pointer;
      background-color: #003344;
@@ -322,8 +326,7 @@ button.btn {
      height: 40px;
      padding: 5px 15px;
      font-size: 1em;
-     font-weight: bold;
-     margin-top: 60px;
+     margin-top: 10px;
      margin-right: 10px;
      transition: all 0.3s ease 0s;
 
@@ -376,8 +379,11 @@ button:focus {
 }
 
 .trend-image {
-     /* background: url(../image/battle-black-blur-260024.jpg); */
-     /* align-content: center; */
+     align-content: center;
+     background-clip: content-box;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: 50%;
      background-repeat: no-repeat;
      background-size: cover;
      height: inherit;
@@ -424,9 +430,12 @@ button:focus {
 
 .about-image {
      background: url(../image/alphabet-arts-and-crafts-blog-459688.jpg);
-     align-content: center;
+     align-content: right;
      background-repeat: no-repeat;
      background-size: cover;
+     height: 300px;
+     width: 300px;
+     border-radius: 50%;
 }
 
 .about-heading {
@@ -498,6 +507,90 @@ button:focus {
 
 
 /* End contact page */
+
+/* PAGES */
+.page {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-auto-rows: minmax(100vh, auto);
+     grid-gap: .5em;
+}
+
+.page-image {
+     background: url("../image/rice.jpg");
+     align-content: center;
+     background-clip: content-box;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: 50%;
+     width: 100%;
+     height: 100vh;
+}
+
+.page-content {}
+
+.page-content>p {
+     padding: 10px;
+     font-size: 1.2em;
+
+}
+
+/* END PAGES */
+/* ADD POST */
+
+.addpost-header {
+     text-align: center;
+     font-size: 2em;
+     color: firebrick;
+     margin-top: 30px;
+     margin-bottom: 20px;
+
+}
+
+.add_post_form {
+     display: grid;
+     grid-template-columns: 35% 55% 10%;
+     justify-content: space-around;
+     margin-bottom: 5px;
+}
+
+.form-control {
+     display: grid;
+     grid-template-columns: 100%;
+     margin: 0;
+
+}
+
+.form-group>label {
+     display: block;
+     font-size: 1.2em;
+     margin: 5px auto;
+
+}
+
+.form-group>input {
+     width: 50%;
+}
+
+.form-group>textarea {
+     width: 50%
+}
+
+button.add_btn {
+     align-items: center;
+     background-color: firebrick;
+     border: none;
+     color: white;
+     border-radius: 5px;
+     width: 100px;
+     height: 40px;
+     padding: 5px 5px;
+     font-size: 1em;
+     font-weight: bold;
+     margin-top: 10px;
+
+     transition: all 0.3s ease 0s;
+}
 
 /*Footer For all Pages  */
 
