@@ -83,25 +83,25 @@ var add = document.querySelector('.add_btn');
 add.addEventListener('click', (e) => {
      e.preventDefault();
      var url = document.querySelector('#url').value;
-var title = document.getElementById('title').value;
-var msg = document.querySelector('textarea').value;
+     var title = document.getElementById('title').value;
+     var msg = document.querySelector('textarea').value;
 
 
 
      posts.push({
-     id: posts.length + 1,
-     title: title,
-     date: Date.now(),
-     image: url,
-     content: msg,
-     pageurl: `../../page${posts.length+1}.html`
-});
+          id: posts.length + 1,
+          title: title,
+          date: Date.now(),
+          image: url,
+          content: msg,
+          pageurl: `../../page${posts.length+1}.html`
+     });
 
 
 
 
      console.log(posts);
-     
+
 
 })
 
@@ -152,7 +152,7 @@ posts.forEach(post => {
      p.textContent = text_truncate(post.content, 100, '.');
      link.textContent = post.title;
 
-     
+
 
      btn.addEventListener('click', (e) => {
           e.preventDefault();
@@ -163,5 +163,3 @@ posts.forEach(post => {
      })
 
 });
-
-
