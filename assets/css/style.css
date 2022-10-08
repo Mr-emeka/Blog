@@ -156,6 +156,14 @@ a svg {
 
 }
 
+.main-nav-mobile {
+     display: none;
+}
+
+.hamburger-icon {
+     display: none;
+}
+
 .navbar-list {
      /* font: bold 12px/18px sans-serif; */
      display: inline-block;
@@ -422,3 +430,124 @@ footer {
 }
 
 /* Footer end */
+
+@media(max-width: 760px) {
+     .header {
+          position: relative;
+          background: #003344;
+     }
+
+     .hamburger-icon {
+          display: block;
+     }
+
+     .main-nav {
+          display: none;
+     }
+
+     .main-nav-mobile {
+          display: block;
+          background: #003344;
+          /* position: absolute; */
+          position: relative;
+          right: 0;
+          left: 0;
+          opacity: 0;
+          height: 0px;
+          overflow: hidden;
+          transition: 0.5s;
+          padding: 1rem 0;
+          margin: 0;
+          text-align: center;
+     }
+
+     .main-nav-mobile.active {
+          opacity: 1;
+          height: 115px;
+          
+     }
+
+     .navbar {
+          justify-content: space-between;
+          align-items: center;
+          padding: 1rem 0;
+          width: 95%;
+     }
+
+     .navbar-list {
+          display: block;
+          padding: 0.5rem 0;
+     }
+
+     .navbar-link {
+          padding: 0;
+     }
+
+     .navbar-brand {
+          margin: 0;
+          position: relative;
+          left: 5%;
+     }
+
+     .about {
+          grid-template-columns: none;
+          grid-auto-rows: auto;
+          width: 100%;
+     }
+
+     .trend {
+          grid-template-columns: none;
+     }
+
+     .trend-image {
+          width: 100%;
+     }
+
+     .cover {
+          height: auto;
+     }
+
+     .welcome-header {
+          margin: 0;
+          padding: 1.5rem 0;
+     }
+
+     .mr {
+          margin-left: 0;
+          margin-right: 0;
+     }
+
+     footer {
+          grid-template-columns: none;
+     }
+
+     .copy {
+          margin: 0;
+     }
+
+     .archive {
+          grid-template-columns: none;
+     }
+
+     .blog-post {
+          grid-template-columns: none;
+     }
+
+     .func {
+          grid-template-columns: none;
+     }
+
+     .contact {
+          grid-template-columns: none;
+          grid-template-rows: none;
+     }
+
+     .grid-box {
+          grid-template-columns: none;
+          grid-template-rows: none;
+          margin-left: 0;
+          margin-right: 0;
+          margin-top: 0;
+          padding: 0 1.2rem 2rem;
+     }
+}
