@@ -14,12 +14,19 @@
           <section class="header">
                <div class="navbar">
                     <span class="navbar-brand"><a class="navbar-brand-link" href="index.html">ENVY</a></span>
-                    <ul class="main-nav">
-                         <li class="navbar-list"><a class="navbar-link" href="index.html">Home</a></li>
-                         <li class="navbar-list"><a class="navbar-link" href="archive.html">Archives</a> </li>
-                         <li class="navbar-list"><a class="navbar-link" href="contact.html">Contact</a></li>
-                    </ul>
+                    <div class="hamburger-icon">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="11">
+                              <g fill="white" fill-rule="evenodd">
+                                   <path d="M0 0h24v1H0zM0 5h24v1H0zM0 10h24v1H0z"/>
+                              </g>
+                         </svg>
+                    </div>
                </div>
+               <ul class="main-nav-mobile">
+                    <li class="navbar-list"><a class="navbar-link" href="index.html">Home</a></li>
+                    <li class="navbar-list"><a class="navbar-link" href="archive.html">Archives</a> </li>
+                    <li class="navbar-list"><a class="navbar-link" href="contact.html">Contact</a></li>
+               </ul>
           </section>
           <section class="main">
                <div class="archive">
@@ -346,6 +353,11 @@
           </footer>
           <!-- Footer End -->
      </div>
+     <script>
+          document.querySelector('.hamburger-icon').addEventListener('click', () => {
+               document.querySelector('.main-nav-mobile').classList.toggle('active')
+          })
+     </script>
 </body>
 
 </html>
